@@ -7,7 +7,7 @@ import {
   uuidV4,
 } from '@skyway-sdk/room';
 
-import { appId, secret } from '../../../env';
+import { "7cf378f5-415f-4162-8bd4-fdb2e3e92ae9", "HUiIbbzbg/b2GFwN0pZNlfE6tf0xPwIrUMHtt1ZyIPY=" } from '../../../env';
 
 const token = new SkyWayAuthToken({
   jti: uuidV4(),
@@ -15,7 +15,7 @@ const token = new SkyWayAuthToken({
   exp: nowInSec() + 60 * 60 * 24,
   version: 3,
   scope: {
-    appId: appId,
+    appId: "7cf378f5-415f-4162-8bd4-fdb2e3e92ae9",
     rooms: [
     {
       name: "*",
@@ -32,7 +32,7 @@ const token = new SkyWayAuthToken({
       enabled: true
     }
   }
-}).encode(secret);
+}).encode("HUiIbbzbg/b2GFwN0pZNlfE6tf0xPwIrUMHtt1ZyIPY=");
 
 void (async () => {
   const localVideo = document.getElementById('local-video');
